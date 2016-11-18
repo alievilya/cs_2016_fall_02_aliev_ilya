@@ -1,1 +1,1 @@
-dfgbdb
+wget -q -O - http://neva.today grep -o "http:.*" | grep -E -v "http://neva.today|http://neva.today" > nevatoday.txt
