@@ -1,0 +1,145 @@
+\documentclass[12pt,a4paper]{article}
+%% Language and font encodings 
+\usepackage[english, russian]{babel} 
+\usepackage[utf8x]{inputenc} 
+\usepackage[T1]{fontenc}  
+%% Sets page size and margins 
+\usepackage[a4paper,top=3cm,bottom=2cm,left=4cm,right=2cm,marginparwidth=1.95cm]{geometry} 
+ %% Useful packages 
+\usepackage{amsmath} 
+\usepackage{graphicx} 
+\usepackage{setspace} 
+\usepackage{lmodern}
+\begin{document} 
+% этим мы убеждаемся, что заголовки глав и 
+% разделов используют нижний регистр. 
+
+ % убираем текущие установки для колонтитулов 
+1
+Dimensions
+1.1 Economics: The power of multinational corporations 1
+1.2 Newtonian mechanics: Free fall 3
+1.3 Guessing integrals 7
+1.4 Summary and further problems 11
+Our first street-fighting tool is dimensional analysis or, when abbreviated,
+dimensions. To show its diversity of application, the tool is introduced
+with an economics example and sharpened on examples from Newtonian
+mechanics and integral calculus.
+1.1 Economics: The power of multinational corporations
+Critics of globalization often make the following comparison [25] to prove
+the excessive power of multinational corporations:
+{\itshape In Nigeria, a relatively economically strong country, the GDP [gross domestic
+
+Morosini.\/}
+operate, what kind of power relationship are we talking about?  asks Laura
+Morosini.
+Before continuing, explore the following question:
+What is the most egregious fault in the comparison between Exxon and Nigeria?
+The field is competitive, but one fault stands out. It becomes evident after
+unpacking the meaning of GDP. A GDP of \$99 billion is shorthand for
+a monetary flow of \$99 billion per year. A year, which is the time for
+the earth to travel around the sun, is an astronomical phenomenon that2 1 Dimensions
+has been arbitrarily chosen for measuring a social phenomenon—namely,
+monetary flow.
+Suppose instead that economists had chosen the decade as the unit of
+time for measuring GDP. Then Nigeria’s GDP (assuming the flow remains
+steady from year to year) would be roughly \$1 trillion per decade and
+be reported as \$1 trillion. Now Nigeria towers over Exxon, whose puny
+assets are a mere one-tenth of Nigeria’s GDP. To deduce the opposite
+conclusion, suppose the week were the unit of time for measuring GDP.
+Nigeria’s GDP becomes \$2 billion per week, reported as \$2 billion. Now
+puny Nigeria stands helpless before the mighty Exxon, 50-fold larger than
+Nigeria.
+A valid economic argument cannot reach a conclusion that depends on
+the astronomical phenomenon chosen to measure time. The mistake lies
+in comparing incomparable quantities. Net worth is an amount: It has
+dimensions of money and is typically measured in units of dollars. GDP,
+however, is a flow or rate: It has dimensions of money per time and
+typical units of dollars per year. (A dimension is general and independent
+of the system of measurement, whereas the unit is how that dimension is
+measured in a particular system.) Comparing net worth to GDP compares
+a monetary amount to a monetary flow. Because their dimensions differ,
+the comparison is a category mistake [39] and is therefore guaranteed to
+generate nonsense.
+Problem 1.1 Units or dimensions?
+Are meters, kilograms, and seconds units or dimensions? What about energy,
+charge, power, and force?
+A similarly flawed comparison is length per time (speed) versus length:
+“I walk 1.5 m s−1—much smaller than the Empire State building in New
+York, which is 300 m high.” It is nonsense. To produce the opposite but
+still nonsense conclusion, measure time in hours: “I walk 5400 m/hr—
+much larger than the Empire State building, which is 300 m high.”
+I often see comparisons of corporate and national power similar to our
+Nigeria–Exxon example. I once wrote to one author explaining that I
+sympathized with his conclusion but that his argument contained a fatal
+dimensional mistake. He replied that I had made an interesting point
+but that the numerical comparison showing the country’s weakness was
+stronger as he had written it, so he was leaving it unchanged!1.2 Newtonian mechanics: Free fall 3
+A dimensionally valid comparison would compare like with like: either
+
+whereas corporate revenues are widely available, try comparing Exxon’s
+annual revenues with Nigeria’s GDP. By 2006, Exxon had become Exxon
+Mobil with annual revenues of roughly 350 billion -- almosttwice Nigeria's 2006 GDP of   200 billion. This valid comparison is stronger than the
+flawed one, so retaining the flawed comparison was not even expedient!
+That compared quantities must have identical dimensions is a necessary
+condition for making valid comparisons, but it is not sufficient. A costly
+illustration is the 1999 Mars Climate Orbiter (MCO), which crashed into
+the surface of Mars rather than slipping into orbit around it. The cause,
+according to the Mishap investigation Board, was a mismatch between English and metric units
+The MCO MIB has determined that the root cause for the loss of the MCO
+spacecraft was the failure to use metric units in the coding of a ground
+software file, Small Forces, used in trajectory models. Specifically, thruster
+performance data in English units instead of metric units was used in the
+software application code titled $SM_FORCES (small forces). A file called Angular Momentum Desaturation (AMD) contained the output data from the
+SM_FORCES software. The data in the AMD file was required to be in metric
+Make sure to mind your dimensions and units.
+Problem 1.2 Finding bad comparisons
+Look for everyday comparisons for example, on the news, in the newspaper,
+or on the Internet that are dimensionally faulty.
+1.2 Newtonian mechanics: Free fall
+Dimensions are useful not just to debunk incorrect arguments but also to
+generate correct ones. To do so, the quantities in a problem need to have
+dimensions. As a contrary example showing what not to do, here is how
+many calculus textbooks introduce a classic problem in motion:
+A ball initially at rest falls from a height of h feet and hits the ground at a
+speed of v feet per second. Find v assuming a gravitational acceleration of g
+feet per second squared and neglecting air resistance.4 1 Dimensions
+The units such as feet or feet per second are highlighted in boldface
+because their inclusion is so frequent as to otherwise escape notice, and
+their inclusion creates a significant problem. Because the height is h
+feet, the variable h does not contain the units of height: h is therefore
+dimensionless. (For h to have dimensions, the problem would instead
+state simply that the ball falls from a height h; then the dimension of
+length would belong to h.) A similar explicit specification of units means
+that the variables g and v are also dimensionless. Because g, h, and v
+are dimensionless, any comparison of v with quantities derived from g
+and h is a comparison between dimensionless quantities. It is therefore
+always dimensionally valid, so dimensional analysis cannot help us guess
+the impact speed.
+Giving up the valuable tool of dimensions is like fighting with one hand
+tied behind our back. Thereby constrained, we must instead solve the
+following differential equation with initial conditions:
+d2y
+dt2 = −g, with y(0) = h and dy/dt = 0 at t = 0, (1.1)
+where y(t) is the ball’s height, dy/dt is the ball’s velocity, and g is the
+gravitational acceleration.
+Problem 1.3 Calculus solution
+Use calculus to show that the free-fall differential equation d2y/dt2 = −g with
+initial conditions y(0) = h and dy/dt = 0 at t = 0 has the following solution:
+dy
+dt = −gt and y = −1
+2
+gt2 + h. (1.2)
+Using the solutions for the ball’s position and velocity in Problem 1.3, what is
+the impact speed?
+When
+y(t) = 0, the ball meets the ground. Thus the impact time t0 is
+2h/g. The impact velocity is −gt0 or −
+√2gh. Therefore the impact
+speed (the unsigned velocity) is √2gh.
+This analysis invites several algebra mistakes: forgetting to take a square
+root when solving for t0, or dividing rather than multiplying by g when
+finding the impact velocity. Practice in other words, making and correcting many mistakes—reduces their prevalence in simple problems, but
+complex problems with many steps remain minefields. We would like
+less error-prone methods.$
+\end{document}
