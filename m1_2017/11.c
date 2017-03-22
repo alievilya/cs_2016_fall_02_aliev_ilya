@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-#include <locale.h>
 
 int r(char *a)
 {
@@ -16,12 +15,10 @@ int r(char *a)
 	}
 	return v;
 }
-int main() 
+void main(void) 
 {
-	setlocale(LC_CTYPE, "Russian");
-
 	char N[1000];
-	printf("Ââåäèòå äâîè÷íîå ÷èñëî ");
+	printf("enter number ");
 	gets(N);
 	printf("%d\n", r(N));
 	return 0;
