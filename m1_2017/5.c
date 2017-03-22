@@ -2,7 +2,7 @@
 #include <locale.h>
 
 
-void main(void)
+int main()
 {
 	setlocale(LC_CTYPE, "Russian");
 	float bot, top, f;
@@ -29,4 +29,7 @@ void main(void)
 		printf("Введите правильную границу интервала \n\n");
 		
 	}
+	
+	return 0;
 }
+
