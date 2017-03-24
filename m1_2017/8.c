@@ -1,17 +1,16 @@
 #include <stdio.h>
-#include <conio.h>
 #include <math.h>
 
 void main(void) 
 {
 	int a=0, b, c;
 	float D, x1, x2, x;
-	printf("vvedite a\n", a);
-	scanf_s("%d", &a);
-	printf("vvedite b\n", &b);
-	scanf_s("%d", &b);
-	printf("vvedite c\n", &c);
-	scanf_s("%d", &c);
+	printf("vvedite a\n");
+	scanf("%d", &a);
+	printf("vvedite b\n");
+	scanf("%d", &b);
+	printf("vvedite c\n");
+	scanf("%d", &c);
 	
 	D = (pow(b, 2) - 4*a*c);
 	 
@@ -28,7 +27,7 @@ void main(void)
 				printf("x2=%.2f\n", x2);
 			}
 			
-			else //åñëè ñ íå ðàâíî íóëþ
+			else 
 			{
 				if (b == 0)
 
@@ -68,5 +67,5 @@ void main(void)
 			x1 = (-c) / b;
 			printf("x1=%.2f\n", x1);
 	}
-	switch (_getch());
+	
 }
