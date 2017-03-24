@@ -5,16 +5,17 @@ void main(void)
 {
 
 	int i, j = 0;
-	char c[100], b[100];
-	gets(c);
-	b[0] = c[0];
-	for (i = 0; c[i] != '\0'; i++)
+	char b[100], c[100];
+	gets(b);
+	c[0] = b[0];
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (b[j - 1] != c[i]) {
-			b[j] = c[i];
-			printf("%c", b[j]);
+		if (c[j - 1] != b[i]) {
+			c[j] = b[i];
+			printf("%c", c[j]);
 			j++;
 		}
-	}
+	}	
+	printf ("\n");
 
 }
