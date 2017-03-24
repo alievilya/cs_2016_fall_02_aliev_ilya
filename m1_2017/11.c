@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string.h>
 
+
 int r(char *a)
 {
 	
@@ -21,5 +22,5 @@ void main(void)
 	printf("enter number ");
 	gets(N);
 	printf("%d\n", r(N));
-	return 0;
+	
 }
