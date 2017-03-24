@@ -2,13 +2,13 @@
 #include <string.h>
 char reverse(char *c)
 {
-	int j = 0, i, m;
+	int n = 0, i, m;
 	char mas[1000];
 	m = strlen(c);
 	for (i = m - 1; i >= 0; --i)
 	{
-		mas[j] = c[i];
-		j++;
+		mas[n] = c[i];
+		n++;
 	}
 	for (i = 0; c[i] != '\0'; ++i)
 	{
@@ -25,6 +25,7 @@ void main(void)
 	for (i = 0; mas[i] != '\0'; ++i)
 	{
 		printf("%c", mas[i]);
+
 	}
-	
+printf("\n");
 }
