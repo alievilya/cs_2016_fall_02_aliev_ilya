@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h> 
-#include <conio.h>
+
 int main()
 {
 
@@ -12,22 +12,22 @@ int main()
 	if (z == '+')
 	{
 		x = x + y;
-		printf("%d", x);
+		printf("%d\n", x);
 	}
 	else if (z == '-')
 	{
 		x = x - y;
-		printf("%d", x);
+		printf("%d\n", x);
 	}
 	else if (z == '/')
 	{
 		x = x / y;
-		printf("%d", x);
+		printf("%d\n", x);
 	}
 	else if (z == '%')
 	{
 		x = x % y;
-		printf("%d", x);
+		printf("%d\n", x);
 	}
 	else if (z == '^')
 	{
@@ -39,17 +39,17 @@ int main()
 		{
 			printf("1");
 		}
-		printf("%d", c);
+		printf("%d\n", c);
 	}
 	else if (z == '*')
 	{
 		x = x*y;
-		printf("%d", x);
+		printf("%d\n", x);
 	}
 	else
 	{
 		printf("INCORRECT");
 	}
-	switch (_getch());
+	
 	return 0;
 }
