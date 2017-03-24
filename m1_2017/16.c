@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <conio.h>
 
 void StrCopy(char *t, char *s, int n)
 {
@@ -36,18 +35,18 @@ int StrCompare(char *t2, char *s2, int n)
 }
 
 void main(void)
-{
+{	//два первых символа из "abcd" записываются в "aaaa"
 	char t[] = "abcd";
 	char s[] = "aaaa";
 	StrCopy(t, s, 2);
 	printf("%s %s\n", t, s);
 	printf("\n");
-
+	// первые 2 символа из "abcd" записываются в конец к "aaaa"
 	char t1[] = "abcd";
 	char s1[] = "aaaa";
 	StrCat(t1, s1, 2);
 	printf("%s %s\n", t1, s1);
-
+	// сравнение строк. Так как они равны, результат- 0
 	char t2[] = "abaa";
 	char s2[] = "abaa";
 	printf("%i\n", StrCompare(s2, t2, 2));
