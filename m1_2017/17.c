@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <conio.h>
+
 
 void array_read(double *a, int n)
 {
@@ -10,7 +10,7 @@ void array_read(double *a, int n)
 	for (i = 0; i < n; i++)
 	{
 		printf("A[%i]=", i);
-		scanf_s("%lf", &a[i]);
+		scanf("%lf", &a[i]);
 
 	}
 
@@ -22,7 +22,7 @@ void array_write(double *a, int n)
 	int i;
 	printf("Array of %i elements:\n", n);
 	for (i = 0; i < n; i++)
-		printf("A[%i]=%f\n", i, a[i]);
+		printf("A[%i]=%.2f\n", i, a[i]);
 
 }
 double array_min( double *a,int n)
@@ -57,7 +57,7 @@ void main(void)
 	double mas[10];
     array_read(mas, 10);
 	array_write(mas, 10);
-	printf("Minimum value:%f, Maximum value is %f\n Raznost mezhdy max i min is %f\n", 
+	printf("Minimum value:%.2f, Maximum value is %.2f\n Raznost mezhdy max i min is %.2f\n", 
 		array_min(mas, 10), array_max(mas, 10), array_max(mas, 10) - array_min(mas, 10));
-	switch (_getch());
+
 }
