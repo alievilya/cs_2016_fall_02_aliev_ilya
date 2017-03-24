@@ -8,9 +8,9 @@ int main()
 	float bot, top, f;
 
 	printf("Введите нижнюю границу интервала : \n");
-	scanf_s("%f", &bot);
+	scanf("%f", &bot);
 	printf("Введите верхнюю границу интервала : \n");
-	scanf_s("%f", &top);
+	scanf("%f", &top);
 	printf("      C      |      F      \n"
 		"_____________|_____________\n");
 	if (bot <= top)
