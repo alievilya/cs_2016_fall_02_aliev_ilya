@@ -1,16 +1,17 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
 
-void main(void) 
+int main() 
 {
-	int a=0, b, c;
+	float a=0, b=0, c=0;
 	float D, x1, x2, x;
 	printf("vvedite a\n");
-	scanf("%d", &a);
+	scanf("%f", &a);
 	printf("vvedite b\n");
-	scanf("%d", &b);
+	scanf("%f", &b);
 	printf("vvedite c\n");
-	scanf("%d", &c);
+	scanf("%f", &c);
 	
 	D = (pow(b, 2) - 4*a*c);
 	 
@@ -67,5 +68,5 @@ void main(void)
 			x1 = (-c) / b;
 			printf("x1=%.2f\n", x1);
 	}
-	
+	return 0;
 }
