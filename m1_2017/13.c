@@ -3,30 +3,19 @@
 
 void main(void)
 {
-	int m = -1, i, b[100], j = 0, k = 0, x;
+	
 	char c[100];
 	gets(c);
-	for (i = 0; c[i] != '\0'; i++)
+	for (int j = 0; c[j] != '\0'; j++)
 	{
-		if (c[i] == ' ')
+		if (c[j] != ' ')
 		{
-				b[j] = i;
-				j++;
-				
-				m = 0;
+		printf ("=");
 		}
 		else
-			if (c[i + 1] == '\0')
-			{
-				b[j] = i - k - m;
-				j++;
-			}
+		printf ("\n");
+			
 	}
-	for (i = 0; i<j; i++)
-	{
-		for (x = 0; x<b[i]; x++)
-			printf("=");
-		printf("\n\n");
-	}
-
+	
+printf ("\n");
 }
