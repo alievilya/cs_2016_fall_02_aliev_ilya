@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() 
+int main()
 {
-	float a=0, b=0, c=0;
+	float a = 0, b = 0, c = 0;
 	float D, x1, x2, x;
 	printf("vvedite a\n");
 	scanf("%f", &a);
@@ -12,12 +12,12 @@ int main()
 	scanf("%f", &b);
 	printf("vvedite c\n");
 	scanf("%f", &c);
-	
+
 	D = (pow(b, 2) - 4*a*c);
-	 
+
 	if (a > 0 || a < 0)
 	{
-		
+
 		if (D > 0)
 		{
 			if (c == 0)
@@ -27,8 +27,8 @@ int main()
 				x2 = (-b - b) / (a * 2);
 				printf("x2=%.2f\n", x2);
 			}
-			
-			else 
+
+			else
 			{
 				if (b == 0)
 
@@ -38,15 +38,15 @@ int main()
 					x2 = -sqrt(-4 * a*c) / (2 * a);
 					printf("x2=%.2f\n", x2);
 				}
-				else 
+				else
 				{
 					printf("tut  2 kornya\n");
-					x1 = (-b + pow(pow(b, 2) - 4 * a*c, (1 / 2))) / (a * 2);
-					printf("x1=%.2f\n", x1);
-					x2 = (-b - pow(pow(b, 2) - 4 * a*c, (1 / 2))) / (a * 2);
-					printf("x2=%.2f\n", x2);
-									
-				} 
+					x1 = (-b + sqrt(D)) / (a * 2);
+					printf("x1=%.3f\n", x1);
+					x2 = (-b - sqrt(D))/(a * 2);
+					printf("x2=%.3f\n", x2);
+
+				}
 			}
 		}
 		else if (D == 0)
@@ -60,13 +60,13 @@ int main()
 		{
 			printf("vvedite normal'no");
 		}
-		
+
 	}
-	else 
+	else
 	{
-			printf("tut 1 koren\n");
-			x1 = (-c) / b;
-			printf("x1=%.2f\n", x1);
+		printf("tut 1 koren\n");
+		x1 = (-c) / b;
+		printf("x1=%.2f\n", x1);
 	}
 	return 0;
 }
