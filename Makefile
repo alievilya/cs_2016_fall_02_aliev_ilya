@@ -1,28 +1,45 @@
-# Project: tet2
-# Makefile created by Dev-C++ 5.11
+SHELL = /bin/sh
 
-CPP      = g++.exe -D__DEBUG__
-CC       = gcc.exe -D__DEBUG__
-WINDRES  = windres.exe
-OBJ      = main.o
-LINKOBJ  = main.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
-INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = tet2.exe
-CXXFLAGS = $(CXXINCS) -g3
-CFLAGS   = $(INCS) -g3
-RM       = rm.exe -f
+PROJECT  := project_name
 
-.PHONY: all all-before all-after clean clean-custom
+# ------------------
+# External programs
+# ------------------
+CC  := gcc
+RM  := rm -rf
 
-all: all-before $(BIN) all-after
+# --------------------
+# Directories & Files
+# --------------------
+D_SRC    := ./src
+FILES_C  := $(wildcard $(D_SRC)/*.c)
+FILES_O  := $(FILES_C:.c=.o)
 
-clean: clean-custom
-	${RM} $(OBJ) $(BIN)
+# ------------
+# Flags 
+# ------------
+CFLAGS  := -Wall
+LFLAGS  :=
+LIBS := `pkg-config --libs allegro-5 allegro_font-5 allegro_image-5 allegro_image-5 allegro_memfile-5 allegro_primitives-5 allegro_image-5 allegro_ttf-5 allegro_main-5.0
+# ------------
+# Targets 
+# ------------
+default: $(PROJECT)
 
-$(BIN): $(OBJ)
-	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+%.o: %.c
+	$(CC) -c -I $(D_SRC) $(CFLAGS) $< -o $@
 
-main.o: main.C
-	$(CC) -c main.C -o main.o $(CFLAGS)
+$(PROJECT): $(FILES_O)
+$(CC) -I $(D_SRC) $(LFLAGS) $(FILES_O) -o $@ $(LIBS) -lm
+
+.phony:	clean
+clean:
+	-$(RM) $(FILES_O) $(PROJECT)
+
+#console
+#cd ~; git clone git://github.com/liballeg/allegro5cd allegro5;git checkout 5.2; mkdir build; cd build
+#sudo ccmake -DCMAKE_INSTALL_PREFIX=/usr ..
+#нажать c,c,g
+#Если ошибка OPUS, то в окне спустится вниз, до WANT_OPUS, поставить с помощью ENTER'а OFF
+#sudo make;sudo make install
+ 
