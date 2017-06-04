@@ -1,34 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 float func(float x)
 {
-	return x*(x+1);
+	return (x*x+4);
 }
 
-void main()
+double integral(double low, double high, int n)
 {
-    float low=0.0, high=0.0 , j = 0.0, n=0.0, x = 0.0, F = 0.0;
-	float F1=0.0, F2=0.0, res0=0.0, res1=0.0, i=0.0, k=1.0;
-    printf("Enter low:\n");
-	scanf("%f", &low);
-	printf("Enter high:\n");
-	scanf("%f", &high);
-	printf("Enter n:\n");
-	scanf("%f", &n);
-    i=(high-low)/(2*n);
-    j=i;
-    F=(j/3)*(func(low)+func(high));
-    
-	while(high > low+2*k*i || high>low+(2*k+1)*i)
-    {
-        F1=(2*j/3)*(func(low+2*k*i));
-        F2=(4*j/3)*(func(low+i*(2*k+1)));
-        k=k+1.0;
-        res0=res0+F1+F2;
-	}
+    int i=1;
+    double a=0.0, res=0.0, s=0.0, s1=0.0, r=0.0;
+    r=(high-low)/n;
+    a=low;
+   while(a<high)
+	{
+        a=a+r;
+                if(i%2!=0)
+                {
+                   s+=func(a); 
+                }
+                else
+                {
+                   s1+=func(a);
+                }
+                i++;
 
-	printf("%f\n", F+res0);
-
-
+    } 
+    res=r/3*(func(low)+func(high)+4*s+2*s1);
+    return res;
+}
+int main()
+{
+    double low_border,high_border;
+    int number_of_fragmentation;
+    printf("Enter low border of function: y=x*x+4 \n");
+    scanf("%lf",&low_border);
+    printf("Enter high border of func\n");
+    scanf("%lf",&high_border);
+    printf("Enter number of fragmentation\n");
+    scanf("%i",&number_of_fragmentation);
+    printf("Integral = %lf\n",integral(low_border,high_border,number_of_fragmentation));
+    return 0;
 }
